@@ -1,0 +1,392 @@
+@import './fonts.css';
+
+* {
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+}
+
+html,
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+main {
+    background-color: #5e095c;
+    box-shadow: rgb(0 0 0 / 35%) 261px -50px 50px -79px inset;
+    min-height: 100vh;
+}
+
+@keyframes ledColor {
+    from {
+        box-shadow: 0px 0px 0px red, 0em 0 3.5em rgb(211, 56, 56);
+    }
+
+    to {
+        box-shadow: 0px 0px 0px red, 0em 0 3.5em rgb(0, 255, 238);
+    }
+}
+
+aside {
+    position: absolute;
+    height: 100vh;
+    width: 130px;
+    background-color: #fff;
+    animation: 5s ease 0s infinite alternate ledColor;
+}
+
+
+@keyframes heartLoop {
+    from {
+        width: 40px;
+    }
+
+    to {
+        width: 60px;
+    }
+}
+
+.asideMain {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.aside_heart {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50px;
+    animation: .6s ease 0s infinite alternate heartLoop;
+}
+
+.aside_nextText {
+    color: #000;
+    -webkit-transform: rotate(-90deg) translateX(90px);
+    transform: rotate(-90deg) translateX(90px);
+}
+
+.aside_count {
+    display: block;
+    text-align: center;
+    padding-bottom: 40px;
+    font-size: 25px;
+}
+
+.aside_next {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.aside_svg {
+    fill: purple;
+    transition: .5s all;
+}
+
+.aside_svg:hover {
+    fill: red;
+}
+
+
+.aside_flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.jessyOpen {
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+    transition: .5s ease all;
+    opacity: 1;
+
+}
+
+.jessyBtn,
+.giftBtn {
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    color: #000;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px red, 0em 0 3.5em red;
+    transition: .5s ease all;
+    opacity: 1;
+}
+
+.content {
+    opacity: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+
+    padding-top: 20%;
+    transition: .5s ease all;
+}
+
+.content_inside {
+    margin: 0 auto;
+    height: 550px;
+    width: 400px;
+    background-color: rgb(72, 147, 174);
+    border: 1px solid;
+    border-radius: 35px;
+}
+
+.content_inside_descr {
+    margin: 0 auto;
+    width: 350px;
+}
+
+.content_inside_cat {
+    display: block;
+    width: 330px;
+    transform: translate(20px, 1px);
+}
+
+
+@keyframes rosesRotate {
+    from {
+        transform: rotateZ(15deg);
+    }
+
+    to {
+        transform: rotateZ(-15deg);
+
+    }
+}
+
+.content_inside_roses {
+    top: 0;
+    right: 10vh;
+    position: absolute;
+    width: 500px;
+    animation: 5s ease 0s infinite alternate rosesRotate;
+}
+
+.content_inside_champanskoe {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    left: 15vh;
+}
+
+@keyframes fireworks {
+    from {
+        opacity: 1;
+        top: 5vh;
+    }
+
+    to {
+        opacity: 0;
+        top: 10vh;
+    }
+}
+
+.content_inside_fireworks {
+    position: absolute;
+    width: 350px;
+    top: 0;
+    left: 35vh;
+    transform: rotateZ(-15deg);
+    animation: 5s ease 0s infinite alternate fireworks;
+
+}
+
+.content_inside_text {
+    padding-top: 50px;
+}
+
+.giftOpen {
+    display: block;
+    padding-top: 100px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    transition: .5s ease all;
+    animation: 5s ease 0s infinite alternate rosesRotate;
+}
+
+.contentThird {
+    padding-top: 20%;
+    transition: .5s ease all;
+    opacity: 0;
+}
+
+
+
+.coupon {
+    display: block;
+    margin: 0 auto;
+    width: 550px;
+    transform: rotateZ(-15deg);
+
+}
+
+.spartak {
+    position: absolute;
+    bottom: 0;
+    right: 15vh;
+    width: 550px;
+}
+
+.mainSecond {
+    background-color: #5e095c;
+}
+
+.rectangle_flex {
+    padding-top: 9vh;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 220px);
+    gap: 80px;
+    justify-content: center;
+
+}
+
+.rectangle {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px red, 0em 0 3.5em red;
+
+}
+
+.rectangle_words {
+    transition: .5s all;
+    color: #000;
+    text-align: center;
+    opacity: 0;
+    margin: 0 auto;
+    margin-top: 50%;
+    width: 200px;
+}
+
+.bow {
+    position: absolute;
+    width: 220px;
+    cursor: pointer;
+
+}
+
+.candies {
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.green_shadow {
+    box-shadow: 0px 0px 0px red, 0em 0 3.5em #00ff2b;
+}
+
+.absolute {
+    position: absolute;
+    left: -83px;
+    top: 45vh;
+    z-index: 100;
+    -webkit-transform: rotate(-90deg) translateX(90px);
+    transform: rotate(-90deg) translateX(90px);
+
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #2eafff;
+}
+
+audio {
+    outline: none;
+}
+
+.end_rectangle {
+    display: block;
+    margin: 0 auto;
+    width: 600px;
+    height: 180px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 0px 0px 0px red, 0em 0 3.5em red;
+
+}
+
+.container_end {
+    padding-top: 100px;
+}
+
+.end {
+    text-align: center;
+    padding-top: 10px;
+    color: #5e095c;
+    font-weight: 700;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.box {
+    display: block;
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 1020px;
+}
+
+.box path {
+    stroke-width: 8;
+    stroke-dasharray: 6500;
+    stroke-dashoffset: 6488;
+    animation: draw 9s linear forwards;
+}
+
+@keyframes draw {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
